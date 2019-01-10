@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule} from '@angular/core';
 import { ButtonModule, TabsModule, AccordionModule, CheckboxModule, RadioModule, TableModule, DropdownModule, LinkModule, ModalModule } from 'carbon-components-angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 import {Routes, RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 import { NewMasterCategoryComponent } from './newMasterCategory/newMasterCategory.component';
@@ -21,7 +24,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule, ButtonModule, TabsModule, AccordionModule, CheckboxModule, RadioModule, TableModule, DropdownModule,
-    LinkModule, ModalModule,
+    LinkModule, ModalModule,BrowserAnimationsModule,
     RouterModule.forRoot(routes, {useHash: true})
   ],
   providers: [],

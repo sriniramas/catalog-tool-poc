@@ -21,20 +21,21 @@
                         aria-expanded="false" ibmButton>File</button>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-toggle dropdown-item tabnextx" data-toggle="dropdown" (click)="onClickMe()"
-                            ibmLink>New
+                            href="#" ibmLink>New
                             <!-- This will execute on click of new-->
                             <div class="dropdown-menu" *ngIf="show">
-                                <a class="dropdown-item" href="#" ibmLink>Restore All and Close</a>
+                                <a class="dropdown-item" [routerLink]="['./masterCategory']" ibmLink>New Master
+                                    Category</a>
                                 <a class="dropdown-item" href="#" ibmLink>Store Preview</a>
                                 <a class="dropdown-item" href="#" ibmLink>Exit Tool</a>
                             </div>
                             <!-- <div class="test" tabindex="-1" *ngIf="show">
-               <ul> <li>
-                        <a class="dropdown-item" href="#" ibmLink>Restore All and Close</a></li>
-                        <li><a class="dropdown-item" href="#" ibmLink>Store Preview</a></li>
-                        <li><a class="dropdown-item" href="#" ibmLink>Exit Tool</a></li>
-                          </div>
-                        </ul> -->
+                            <ul> 
+                                <li><a class="dropdown-item" href="#" ibmLink>Restore All and Close</a></li>
+                                <li><a class="dropdown-item" href="#" ibmLink>Store Preview</a></li>
+                                <li><a class="dropdown-item" href="#" ibmLink>Exit Tool</a></li>
+                            </ul>
+                            </div>-->
                         </a>
                         <a class="dropdown-item" href="#" ibmLink>Open</a>
                         <a class="dropdown-item" href="#" ibmLink>Open Compare View</a>
@@ -47,13 +48,6 @@
                         <a class="dropdown-item" href="#" ibmLink>Store Preview</a>
                         <a class="dropdown-item" href="#" ibmLink>Exit Tool</a>
                     </div>
-                    <!-- <ul>
-                    <li><div  *ngIf="show">
-                            <a class="dropdown-item" href="#" ibmLink>Restore All and Close</a>
-                            <a class="dropdown-item" href="#" ibmLink>Store Preview</a>
-                            <a class="dropdown-item" href="#" ibmLink>Exit Tool</a>
-                              </div></li>
-                            </ul> -->
                 </li>
                 <li class="nav-item dropdown">
                     <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
@@ -102,23 +96,36 @@
             </ul>
             <ul class="navbar-nav w-100 bg-secondary px-3">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"><span><i class="fas fa-arrow-circle-left"></i></span></a>
+                    <a class="nav-link" href="#">
+                        <span>
+                            <i class="fas fa-arrow-circle-left"></i>
+                        </span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span><i class="fas fa-arrow-circle-right"></i></span></a>
+                    <a class="nav-link" href="#">
+                        <span>
+                            <i class="fas fa-arrow-circle-right"></i>
+                        </span>
+                    </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" [routerLink]="['./masterCategory']" [routerLinkActive] = "['active']" id="navbarDropdownMenuLink"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span><i class="fas fa-plus-circle"></i></span>
+                    <a class="nav-link dropdown-toggle" [routerLink]="['./masterCategory']" id="navbarDropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span><i class="fas fa-plus-circle"></i>
+                        </span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" [routerLink]="['./masterCategory']">New Master Category</a>
+                        <a class="dropdown-item" href="#">Category-level SKU</a>
+                        <a class="dropdown-item" href="#">Product-level SKU</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span><i class="fas fa-folder-open"></i></span></a>
+                    <a class="nav-link" href="#">
+                        <span><i class="fas fa-folder-open"></i>
+                        </span>
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
@@ -135,10 +142,17 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span><i class="far fa-stop-circle"></i></span></a>
+                    <a class="nav-link" href="#">
+                        <span>
+                            <i class="far fa-stop-circle"></i>
+                        </span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span><i class="fas fa-globe"></i></span></a>
+                    <a class="nav-link" href="#">
+                        <span><i class="fas fa-globe"></i>
+                        </span>
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
@@ -168,15 +182,19 @@
                     </ibm-dropdown>
                 </p>
                 <p><a href="#">Link</a></p>
-                    <button ibmButton [routerLink]="['./masterCategory']" class="masterSection">
+                <div class="masterSection">
+                    <button ibmButton [routerLink]="['./masterCategory']">
                         <span class="iconFontSizeSection"><i class="fas fa-bars"></i></span>
                         <label class="headAlertTxtSection"><span class="exclaIconSection"><i class='fas fa-exclamation-circle'></i></span></label>
                         <sup><span class="starFontSection"><i class="fas fa-star-of-life"></i></span></sup>
                         New Master Category
                     </button>
+                </div>
+                <div>
                     <button ibmButton [routerLink]="['./categoryList']">
                         ExtendedSitesCatalogAssetStore
                     </button>
+                </div>
             </section>
             <div class="col-sm-9 text-left">
                 <h1>Welcome</h1>
@@ -189,10 +207,11 @@
     </div>
 
     <footer class="container-fluid text-center">
-            <!-- <p (click)="footerClick()">Footer Text</p> -->
-            
-            <a routerLink="/modal">
-        <p>Footer Text</p></a>
+        <!-- <p (click)="footerClick()">Footer Text</p> -->
+
+        <a routerLink="/modal">
+            <p>Footer Text</p>
+        </a>
     </footer>
 
 </body>

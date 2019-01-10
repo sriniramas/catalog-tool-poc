@@ -12,19 +12,19 @@ export class NavbarComponent implements OnInit {
 
   listItems = [
     {
-      content: "item one",
+      content: "AuroraESite",
       selected: false
     },
     {
-      content: "item two",
+      content: "ExtendedSitesCatalogAssetStore",
       selected: false,
     },
     {
-      content: "item three",
+      content: "MyCustomStore",
       selected: false
     },
     {
-      content: "item four",
+      content: "MyCustomStoreCAS",
       selected: false
     }
   ];
@@ -38,7 +38,8 @@ export class NavbarComponent implements OnInit {
   // formData.show = {};
 
   onClickMe() {
-    this.show = !this.show;
+    this.show = true;
+    //this.show = !this.show;
 
     //this.formData.show = !this.formData.show;
   }

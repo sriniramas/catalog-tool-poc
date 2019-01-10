@@ -1,4 +1,5 @@
 import { Component, OnInit,Output,EventEmitter, Input } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-modelmessage',
@@ -7,9 +8,9 @@ import { Component, OnInit,Output,EventEmitter, Input } from '@angular/core';
 })
 export class ModelmessageComponent implements OnInit {
   @Input() modalText = "Footer sample model";
-  @Output() close = new EventEmitter();
-	closeModal(e): void {
-		this.close.emit();
+  @Output() close = new EventEmitter<boolean>();
+	closeModal(event: any): void {
+		this.close.emit(false);
 	}
 
   constructor() { }
