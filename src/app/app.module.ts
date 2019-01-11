@@ -10,8 +10,10 @@ import { NewMasterCategoryComponent } from './newMasterCategory/newMasterCategor
 import { ModelmessageComponent } from './modelmessage/modelmessage.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CategoriesListComponent } from './categories-list/categories-list.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
+  { path: '', component: LandingPageComponent},
   { path: 'masterCategory', component: NewMasterCategoryComponent},
   { path: 'modal', component: ModelmessageComponent},
   { path: 'categoryList', component: CategoriesListComponent}
@@ -20,7 +22,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent, NewMasterCategoryComponent, ModelmessageComponent, NavbarComponent, CategoriesListComponent
+    AppComponent, NewMasterCategoryComponent, ModelmessageComponent, NavbarComponent, CategoriesListComponent, LandingPageComponent
   ],
   imports: [
     BrowserModule, ButtonModule, TabsModule, AccordionModule, CheckboxModule, RadioModule, TableModule, DropdownModule,
