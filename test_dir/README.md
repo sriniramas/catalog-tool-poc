@@ -29,3 +29,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ##
 ## This is just to check if the git hub process is working correctly.
 ## 
+
+I hope this git process can be mastered properly.
